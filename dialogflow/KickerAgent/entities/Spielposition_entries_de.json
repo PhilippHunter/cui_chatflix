@@ -1,0 +1,18 @@
+[
+  {
+    "value": "Attack",
+    "synonyms": [
+      "Attack",
+      "Angriff",
+      "Sturm"
+    ]
+  },
+  {
+    "value": "Defense",
+    "synonyms": [
+      "Defense",
+      "Verteidigung",
+      "Abwehr"
+    ]
+  }
+]

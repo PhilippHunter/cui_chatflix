@@ -1,0 +1,83 @@
+[
+  {
+    "id": "6d1f082b-4417-4d67-b606-8fb0f18a8bf5",
+    "data": [
+      {
+        "text": "Neues Match im der ",
+        "userDefined": false
+      },
+      {
+        "text": "Verteidigung",
+        "alias": "Spielposition",
+        "meta": "@Spielposition",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "195ae2a3-fe88-477b-a897-8663cac6b01e",
+    "data": [
+      {
+        "text": "Neues Match",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b1897ba3-57dd-4252-a11b-c0f3a996fc1b",
+    "data": [
+      {
+        "text": "Neues Spiel auf Position ",
+        "userDefined": false
+      },
+      {
+        "text": "Angriff",
+        "alias": "Spielposition",
+        "meta": "@Spielposition",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b8789d35-1ee3-478d-8d17-c31960bb5372",
+    "data": [
+      {
+        "text": "Ich möchte ",
+        "userDefined": false
+      },
+      {
+        "text": "ein",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " neues Spiel anlegen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "cc5a61be-8e60-426a-b8cc-33bfe22de062",
+    "data": [
+      {
+        "text": "Neues Spiel anlegen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

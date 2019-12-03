@@ -1,0 +1,9 @@
+{
+  "id": "da2eb3a0-a3b6-4d9b-b649-7bc96c2f16ca",
+  "name": "Spielposition",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

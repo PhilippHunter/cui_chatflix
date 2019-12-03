@@ -1,0 +1,31 @@
+{
+  "name": "actions-on-google-webhook-ts",
+  "version": "0.0.1",
+  "description": "webhook for dialogflow targeting Google Assistant to assistant collecting colleagues for a kicker match.",
+  "license": "ISC",
+  "private": true,
+  "bin": {
+    "ssgh": "./index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "sbl@adorsys.de",
+  "dependencies": {
+    "actions-on-google": "^2.12.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "7.12.1",
+    "uuid": "^3.3.3"
+  },
+  "engines": {
+    "node": "10.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/pg": "^7.11.2",
+    "@types/body-parser": "^1.17.1",
+    "@types/actions-on-google": "^1.10.3"
+  }
+}
