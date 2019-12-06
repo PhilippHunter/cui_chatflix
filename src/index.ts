@@ -3,16 +3,19 @@ import * as bodyParser from 'body-parser'
 import * as uuidv4 from 'uuid'
 
 import { dialogflow, Permission} from 'actions-on-google'
+import { DataHandler } from './Persistence/DataHandler'
 
 let isUserKnown: boolean = false
 
 const app = dialogflow({debug: true})
 
+const dataHandler = new DataHandler()
+
 app.middleware(conv => {
     isUserKnown = ('userId' in conv.user.storage)
 })
 
-app.intent('Default Welcome Intent', conv => {
+app.intent('Welcome Intent', conv => {
     if (isUserKnown) {
         conv.ask('Hallo. Wie geht es Dir heute?')
     } else {
@@ -24,6 +27,27 @@ app.intent('Default Welcome Intent', conv => {
         }))
     }
 })
+
+app.intent('InformationIntent', (conv, params) => {
+    console.log(conv.intent);
+    console.log(params);
+    const series = params.Serie
+    const film = params.Film
+
+    //decide between film and series
+    if(series!=''){
+        console.log(series);
+        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        const information = dataHandler.getInformation(series);
+        conv.ask(information);
+    }
+    else{
+        console.log(film);
+        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        const information = dataHandler.getInformation(film);
+        conv.ask(information);
+    }
+});
 
 app.intent('UserPermissionIntent', (conv, params, confirmationGranted) => {
     console.log(params)

@@ -1,0 +1,17 @@
+{
+    "entry1":{
+        "name":"Kindsköpfe",
+        "information":"Kindsköpfe ist eine US-amerikanische Komödie mit Adam Sandler, Kevin James, Chris Rock, David Spade und Rob Schneider aus dem Jahr 2010.",
+        "release_year": "2010"
+    },
+    "entry2":{
+        "name":"Suits",
+        "information":"Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen.",
+        "release_year": "2014"
+    }, 
+    "entry3":{
+        "name":"Stranger Things",
+        "information":"Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde.",
+        "release_year": "2016"
+    }
+}

@@ -4,12 +4,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const uuidv4 = require("uuid");
 const actions_on_google_1 = require("actions-on-google");
+const DataHandler_1 = require("./Persistence/DataHandler");
 let isUserKnown = false;
 const app = actions_on_google_1.dialogflow({ debug: true });
+const dataHandler = new DataHandler_1.DataHandler();
 app.middleware(conv => {
     isUserKnown = ('userId' in conv.user.storage);
 });
-app.intent('Default Welcome Intent', conv => {
+app.intent('Welcome Intent', conv => {
     if (isUserKnown) {
         conv.ask('Hallo. Wie geht es Dir heute?');
     }
@@ -20,6 +22,25 @@ app.intent('Default Welcome Intent', conv => {
             context: "Wie ist Dein Name?",
             permissions: ["NAME"]
         }));
+    }
+});
+app.intent('InformationIntent', (conv, params) => {
+    console.log(conv.intent);
+    console.log(params);
+    const series = params.Serie;
+    const film = params.Film;
+    //decide between film and series
+    if (series != '') {
+        console.log(series);
+        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        const information = dataHandler.getInformation(series);
+        conv.ask(information);
+    }
+    else {
+        console.log(film);
+        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        const information = dataHandler.getInformation(film);
+        conv.ask(information);
     }
 });
 app.intent('UserPermissionIntent', (conv, params, confirmationGranted) => {
