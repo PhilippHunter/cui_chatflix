@@ -27,7 +27,6 @@ export class DataHandler{
             
             //comparing names
             if(curGenre.localeCompare(genre)==0) {
-
                 //getting information for name
                 const movieName = data[key].name;
                 console.log(movieName);
@@ -37,7 +36,6 @@ export class DataHandler{
         return result;
     }
 
-    
     getActors(name:any) {
         //iterating through object
         for (var key in data) {          
