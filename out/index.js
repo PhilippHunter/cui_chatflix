@@ -13,21 +13,34 @@ app.intent('Welcome Intent', conv => {
 app.intent('InformationIntent', (conv, params) => {
     console.log(conv.intent);
     console.log(params);
-    const series = params.Serie;
-    const film = params.Film;
+    const input = params.Serie ? params.Serie : params.Film;
     //decide between film and series
-    if (series != '') {
-        console.log(series);
-        conv.ask('Hier sind Informationen zu deiner Suche:');
-        const information = dataHandler.getInformation(series);
-        conv.ask(information);
+    if (input != '') {
+        console.log(input);
+        const information = dataHandler.getInformation(input);
+        conv.ask('Hier sind Informationen zu deiner Suche:\n' + information);
+        conv.ask('Möchtest du noch mehr Informationen zu den Schauspielern erfahren?');
     }
-    else {
-        console.log(film);
-        conv.ask('Hier sind Informationen zu deiner Suche:');
-        const information = dataHandler.getInformation(film);
-        conv.ask(information);
-    }
+});
+app.intent('ActorInformation-FollowupIntent', (conv, params) => {
+    let resultString = '';
+    console.log(conv.intent);
+    console.log(params);
+    let parameters = conv.contexts.get('informationintent-followup').parameters;
+    const input = parameters.Serie ? parameters.Serie : parameters.Film;
+    console.log(input);
+    let actors = dataHandler.getActors(input);
+    actors.forEach(s => resultString = resultString + '\n' + s);
+    conv.ask('Es spielen folgende Schauspieler mit: \n' + resultString);
+});
+app.intent('ActorInformationIntent', (conv, params) => {
+    let resultString = '';
+    console.log(conv.intent);
+    console.log(params);
+    const input = params.Serie ? params.Serie : params.Film;
+    let actors = dataHandler.getActors(input);
+    actors.forEach(s => resultString = resultString + '\n' + s);
+    conv.ask('Es spielen folgende Schauspieler mit: \n' + resultString);
 });
 app.intent('GenreIntent', (conv, params) => {
     let genre = params.Genre;

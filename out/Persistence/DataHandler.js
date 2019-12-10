@@ -31,6 +31,20 @@ class DataHandler {
         }
         return result;
     }
+    getActors(name) {
+        //iterating through object
+        for (var key in data) {
+            //getting value
+            const curName = data[key].name;
+            //comparing names
+            if (curName.localeCompare(name) == 0) {
+                //getting information for name
+                const actors = data[key].actors;
+                console.log(actors);
+                return actors;
+            }
+        }
+    }
 }
 exports.DataHandler = DataHandler;
 //# sourceMappingURL=DataHandler.js.map
