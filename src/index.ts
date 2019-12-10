@@ -11,21 +11,8 @@ const app = dialogflow({debug: true})
 
 const dataHandler = new DataHandler()
 
-app.middleware(conv => {
-    isUserKnown = ('userId' in conv.user.storage)
-})
-
 app.intent('Welcome Intent', conv => {
-    if (isUserKnown) {
-        conv.ask('Hallo. Wie geht es Dir heute?')
-    } else {
-        console.log(conv.intent)
-        conv.ask('Hallo. Wer bist Du denn?')
-        conv.ask(new Permission({
-            context: "Wie ist Dein Name?",
-            permissions: ["NAME"]
-        }))
-    }
+        conv.ask('Hallo, ich bin Chatflix. Wie kann ich dir helfen?')
 })
 
 app.intent('InformationIntent', (conv, params) => {
@@ -37,30 +24,28 @@ app.intent('InformationIntent', (conv, params) => {
     //decide between film and series
     if(series!=''){
         console.log(series);
-        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        conv.ask('Hier sind Informationen zu deiner Suche:');
         const information = dataHandler.getInformation(series);
         conv.ask(information);
     }
     else{
         console.log(film);
-        conv.ask('Hier sind Informationen zu der deiner Suche:');
+        conv.ask('Hier sind Informationen zu deiner Suche:');
         const information = dataHandler.getInformation(film);
         conv.ask(information);
     }
 });
 
-app.intent('UserPermissionIntent', (conv, params, confirmationGranted) => {
-    console.log(params)
-    const {name} = conv.user
-    console.log('user\'s name' + name.given + ', ' + name.family)
-
-    if (confirmationGranted) {
-        conv.close('Hallo ' + name.given)
-        const newUserId = uuidv4()
-        conv.user.storage['userId'] = newUserId
-    } else {
-        conv.close('Das ist aber Schade!')
+app.intent('GenreIntent', (conv, params) => {
+    let genre = params.Genre
+    let resultString: string = '';
+    let result = dataHandler.getMoviesInGenre(genre);
+    if(result.length != 0) {
+        console.log(result)
+        conv.ask('Hier sind ein paar Vorschläge:')
+        result.forEach(s => resultString = resultString + '\n' + s);
     }
+    conv.ask(resultString);
 })
 
 

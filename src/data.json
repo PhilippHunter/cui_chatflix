@@ -1,17 +1,38 @@
 {
     "entry1":{
-        "name":"Kindsköpfe",
-        "information":"Kindsköpfe ist eine US-amerikanische Komödie mit Adam Sandler, Kevin James, Chris Rock, David Spade und Rob Schneider aus dem Jahr 2010.",
-        "release_year": "2010"
+        "name": "Kindsköpfe",
+        "information": "Kindsköpfe ist eine US-amerikanische Komödie mit Adam Sandler, Kevin James, Chris Rock, David Spade und Rob Schneider aus dem Jahr 2010.",
+        "release_year": "2010",
+        "genre": "Comedy",
+        "type": "Movie",
+        "actors": []
     },
     "entry2":{
-        "name":"Suits",
-        "information":"Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen.",
-        "release_year": "2014"
+        "name": "Suits",
+        "information": "Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen.",
+        "release_year": "2014",
+        "genre": "Legal Drama",
+        "type": "Series",
+        "actors": []
     }, 
     "entry3":{
-        "name":"Stranger Things",
-        "information":"Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde.",
-        "release_year": "2016"
+        "name": "Stranger Things",
+        "information": "Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde.",
+        "release_year": "2016",
+        "genre": "Horror",
+        "type": "Series",
+        "actors": []
+    },
+    "entry4":{
+        "name": "American Horror Story",
+        "information": "American Horror Story ist eine US-amerikanische Horror-Fernsehserie, die auf einer Idee von Ryan Murphy und Brad Falchuk basiert.",
+        "release_year": "2016",
+        "genre": "Horror",
+        "type": "Series",
+        "actors": [
+            "Connie Britton",
+            "Dylan McDermott",
+            "Evan Peters"
+        ]
     }
 }
