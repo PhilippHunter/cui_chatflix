@@ -2,37 +2,281 @@
     "entry1": {
         "name": "Kindsköpfe",
         "information": "Kindsköpfe ist eine US-amerikanische Komödie mit Adam Sandler, Kevin James, Chris Rock, David Spade und Rob Schneider aus dem Jahr 2010.",
-        "release_year": "2010",
         "genre": "Comedy",
         "type": "Movie",
-        "actors": []
+        "actors": [
+            "Adam Sandler",
+            "Kevin James",
+            "Chris Rock",
+            "David Spade",
+            "Rob Schneider",
+            "Salma Hayek"
+        ]
     },
     "entry2": {
         "name": "Suits",
-        "information": "Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen.",
-        "release_year": "2014",
+        "information": "Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen. Die Erstausstrahlung erfolgte in den USA am 23. Juni 2011 beim US-Kabelsender USA Network sowie am 7. Januar 2013 bei FOX in Deutschland.",
         "genre": "Legal Drama",
         "type": "Series",
-        "actors": []
+        "actors": [
+            "Gabriel Macht",
+            "Patrick J. Adams",
+            "Meghan Markle",
+            "Rick Hoffman",
+            "Sarah Rafferty",
+            "Gina Torres"
+        ]
     },
     "entry3": {
         "name": "Stranger Things",
-        "information": "Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde.",
-        "release_year": "2016",
-        "genre": "Horror",
+        "information": "Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde. Es finden sich zahlreiche visuelle Referenzen an bekannte Filme aus den 1970er- und 80er-Jahren wie Die Goonies, E.T., Alien, Stand by Me, Poltergeist, Shining, Unheimliche Begegnung der dritten Art, Zurück in die Zukunft und andere.",
+        "genre": "Science-Fiction",
         "type": "Series",
-        "actors": []
+        "actors": [
+            "Winona Ryder",
+            "David Harbour",
+            "Finn Wolfhard",
+            "Millie Bobby Brown",
+            "Gaten Matarazzo",
+            "Caleb McLaughlin"
+        ]
     },
     "entry4": {
         "name": "American Horror Story",
-        "information": "American Horror Story ist eine US-amerikanische Horror-Fernsehserie, die auf einer Idee von Ryan Murphy und Brad Falchuk basiert.",
-        "release_year": "2016",
+        "information": "American Horror Story ist eine US-amerikanische Horror-Fernsehserie, die auf einer Idee von Ryan Murphy und Brad Falchuk basiert. Die Serie startete am 5. Oktober 2011 auf dem US-Kabelsender FX. In Deutschland wird die Serie seit dem 9. November 2011 auf dem Pay-TV-Sender FOX ausgestrahlt.",
         "genre": "Horror",
         "type": "Series",
         "actors": [
             "Connie Britton",
             "Dylan McDermott",
-            "Evan Peters"
+            "Evan Peters",
+            "Taissa Farmiga",
+            "Denis O'Hare",
+            "Jessica Lange"
+        ]
+    },
+    "entry5": {
+        "name": "Inception",
+        "information": "Inception ist ein US-amerikanischer Science-Fiction-Heist-Film aus dem Jahr 2010 und der siebte Spielfilm des US-amerikanisch-britischen Regisseurs Christopher Nolan, der auch das Drehbuch verfasste und als Produzent fungierte.",
+        "genre": "Science-Fiction",
+        "type": "Movie",
+        "actors": [
+            "Leonardo DiCaprio",
+            "Ken Watanabe",
+            "Joseph Gordon-Levitt",
+            "Marion Cotillard",
+            "Ellen Page",
+            "Tom Hardy"
+        ]
+    },
+    "entry6": {
+        "name": "Avengers Endgame",
+        "information": "Avengers: Endgame ist ein von Marvel Studios produzierter US-amerikanischer Science-Fiction-Actionfilm, der in Teilen auch Eigenschaften eines Filmdramas und Heist-Movies aufweist. Der Film kam am 24. April 2019 in die deutschsprachigen und zwei Tage später in die US-Kinos. Es handelt sich um den 22. Spielfilm innerhalb des Marvel Cinematic Universe (MCU) und den vierten Avengers-Film.",
+        "genre": "Science-Fiction",
+        "type": "Movie",
+        "actors": [
+            "Robert Downey Jr.",
+            "Chris Evans",
+            "Scarlett Johansson",
+            "Mark Ruffalo",
+            "Paul Rudd",
+            "Jeremy Renner"
+        ]
+    },
+    "entry7": {
+        "name": "The Dark Knight",
+        "information": "The Dark Knight (dt. Der dunkle Ritter) ist ein US-amerikanisch-britisches Actiondrama und eine Comicverfilmung des Regisseurs Christopher Nolan aus dem Jahr 2008, das auf dem von Bob Kane und Bill Finger erschaffenen Batman-Mythos basiert.",
+        "genre": "Actiondrama",
+        "type": "Movie",
+        "actors": [
+            "Christian Bale",
+            "Heath Ledger",
+            "Gary Oldman",
+            "Aaron Eckhart",
+            "Maggie Gyllenhaal",
+            "Michael Caine"
+        ]
+    },
+    "entry8": {
+        "name": "Pulp Fiction",
+        "information": "Pulp Fiction ist ein Film von und mit Quentin Tarantino aus dem Jahr 1994. Der Film wurde für sieben Oscars nominiert – darunter in der Kategorie Bester Film – und gewann in der Kategorie Bestes Originaldrehbuch.",
+        "genre": "Drama",
+        "type": "Movie",
+        "actors": [
+            "John Travolta",
+            "Samuel L. Jackson",
+            "Uma Thurman",
+            "Bruce Willis",
+            "Harvey Keitel",
+            "Maria de Medeiros"
+        ]
+    },
+    "entry9": {
+        "name": "Hangover",
+        "information": "Hangover (englisch für „Kater“) ist eine US-amerikanische Filmkomödie aus dem Jahr 2009. Der Film bildet den Auftakt der Hangover-Trilogie.",
+        "genre": "Comedy",
+        "type": "Movie",
+        "actors": [
+            "Bradley Cooper",
+            "Ed Helms",
+            "Zach Galifianakis",
+            "Justin Bartha",
+            "Heather Graham",
+            "Sasha Barrese"
+        ]
+    },
+    "entry10": {
+        "name": "Deadpool",
+        "information": "Deadpool ist ein US-amerikanischer Actionfilm mit satirischen Elementen. Die Comicverfilmung basiert auf der Comicfigur Deadpool des Marvel-Verlages. Es handelt sich um den achten Teil der X-Men-Filmreihe. Der Film startete am 11. Februar 2016 in den deutschen Kinos.",
+        "genre": "Action",
+        "type": "Movie",
+        "actors": [
+            "Ryan Reynolds",
+            "Morena Baccarin",
+            "Ed Skrein",
+            "T. J. Miller",
+            "Gina Carano",
+            "Stefan Kapičić"
+        ]
+    },
+    "entry11": {
+        "name": "21 Jump Street",
+        "information": "21 Jump Street ist eine US-amerikanische Filmkomödie aus dem Jahr 2012. Es handelt sich um die Kinoadaption der Fernsehserie 21 Jump Street – Tatort Klassenzimmer.",
+        "genre": "Comedy",
+        "type": "Movie",
+        "actors": [
+            "Jonah Hill",
+            "Channing Tatum",
+            "Brie Larson",
+            "Dave Franco",
+            "Rob Riggle",
+            "DeRay Davis"
+        ]
+    },
+    "entry12": {
+        "name": "Die Hochzeits-Crasher",
+        "information": "Die Hochzeits-Crasher (Originaltitel Wedding Crashers) ist eine Filmkomödie des Regisseurs David Dobkin aus dem Jahre 2005 mit Owen Wilson und Vince Vaughn.",
+        "genre": "Comedy",
+        "type": "Movie",
+        "actors": [
+            "Owen Wilson",
+            "Vince Vaughn",
+            "Christopher Walken",
+            "Rachel McAdams",
+            "Isla Fisher",
+            "Jane Seymour"
+        ]
+    },
+    "entry13": {
+        "name": "Breaking Bad",
+        "information": "Breaking Bad ist eine US-amerikanische Krimi-Drama-Fernsehserie aus dem Jahr 2008 von Vince Gilligan. Sie zeigt die Wandlung eines an Lungenkrebs erkrankten biederen Chemielehrers zu einem rücksichtslosen Kriminellen.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Bryan Cranston",
+            "Aaron Paul",
+            "Anna Gunn",
+            "RJ Mitte",
+            "Dean Norris",
+            "Betsy Brandt"
+        ]
+    },
+    "entry14": {
+        "name": "The Walking Dead",
+        "information": "The Walking Dead ist eine US-amerikanische Fernsehserie von Frank Darabont. Die Handlung basiert auf der gleichnamigen Comicserie von Robert Kirkman und Tony Moore. Die Serie startete am 31. Oktober 2010 in den Vereinigten Staaten bei AMC mit einer etwa 67-minütigen Pilotepisode im Rahmen des sogenannten „Fearfest“ des Senders.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Norman Reedus",
+            "Melissa McBride",
+            "Danai Gurira",
+            "Josh McDermitt",
+            "Christian Serratos",
+            "Seth Gilliam"
+        ]
+    },
+    "entry15": {
+        "name": "Black Mirror",
+        "information": "Black Mirror ist eine britische Science-Fiction-Serie aus dem Jahr 2011 von Charlie Brooker, die verschiedenartige Auswirkungen der Verwendung von Technik und Medien auf die Gesellschaft thematisiert.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Bryce Dallas Howard",
+            "Jon Hamm",
+            "Hayley Atwell",
+            "Daniel Kaluuya",
+            "Cristin Milioti",
+            "Michaela Coel"
+        ]
+    },
+    "entry16": {
+        "name": "Tote Mädchen lügen nicht",
+        "information": "Tote Mädchen lügen nicht ist eine US-amerikanische Fernsehserie, die auf dem gleichnamigen Roman von Jay Asher basiert. Die erste Staffel wurde am 31. März 2017 auf Netflix veröffentlicht.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Dylan Minnette",
+            "Katherine Langford",
+            "Christian Navarro",
+            "Brandon Flynn",
+            "Justin Prentice",
+            "Ross Butler"
+        ]
+    },
+    "entry17": {
+        "name": "House of Cards",
+        "information": "House of Cards ist eine US-amerikanische Fernsehserie, deren Erstausstrahlung 2013 bei dem Video-on-Demand-Anbieter Netflix lief und die vorwiegend den Genres Politthriller und Drama zugeordnet wird. Sie erzählt die Geschichte des durchtriebenen Abgeordneten Francis „Frank“ Underwood, der gemeinsam mit seiner ähnlich machthungrigen Ehefrau ein System von Intrige, Korruption und Mord kreiert, um in höhere politische Ämter aufzusteigen und somit seinen Machteinfluss zu vergrößern.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Kevin Spacey",
+            "Robin Wright",
+            "Michael Kelly",
+            "Kate Mara",
+            "Corey Stoll",
+            "Sakina Jaffrey"
+        ]
+    },
+    "entry18": {
+        "name": "Haus des Geldes",
+        "information": "Haus des Geldes ist eine spanische Fernsehserie von Álex Pina, die im Stile eines Heist-Movies die Geschichte eines Überfalls mit Geiselnahme auf die spanische Banknotendruckerei (Teil bzw. Staffel 1 und 2) bzw. die spanische Zentralbank (Staffel 3) erzählt. Die spanische Erstausstrahlung der Serie erfolgte ab dem 2. Mai 2017.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Álvaro Morte",
+            "Pedro Alonso",
+            "Úrsula Corberó",
+            "Miguel Herrán",
+            "Alba Flores",
+            "Jaime Lorente"
+        ]
+    },
+    "entry19": {
+        "name": "Narcos",
+        "information": "Narcos ist eine US-amerikanische Kriminal- und Historien-Dramaserie aus dem Jahr 2015. Sie handelt über Drogenkartelle in den 1980er und 1990er Jahren in Kolumbien. Die ersten beiden Staffeln erzählen die Geschichte von Pablo Escobar und dem Medellín-Kartell, die dritte Staffel die des Cali-Kartells. Alternativ ist die Serie auch unter dem Titel Narcos: Colombia bekannt.",
+        "genre": "Drama",
+        "type": "Series",
+        "actors": [
+            "Wagner Moura",
+            "Pedro Pascal",
+            "Boyd Holbrook",
+            "Alberto Ammann",
+            "Paulina Gaitán",
+            "Jorge Monterrosa"
+        ]
+    },
+    "entry20": {
+        "name": "Prison Break",
+        "information": "Prison Break ist eine US-amerikanische Actionserie von Autor Paul Scheuring, die ab 2005 bis 2009 produziert und 2017 fortgesetzt wurde. Sie besteht zurzeit aus 90 Episoden, welche in fünf Staffeln unterteilt sind. Die Erstausstrahlung fand ab dem 29. August 2005 auf dem US-amerikanischen Fernsehsender Fox statt.",
+        "genre": "Action",
+        "type": "Series",
+        "actors": [
+            "Wentworth Miller",
+            "Dominic Purcell",
+            "Amaury Nolasco",
+            "Robert Knepper",
+            "Wade Williams",
+            "Sarah Wayne Callies"
         ]
     }
 }

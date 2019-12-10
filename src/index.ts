@@ -11,21 +11,19 @@ const app = dialogflow({debug: true})
 
 const dataHandler = new DataHandler()
 
-app.intent('Welcome Intent', conv => {
-        conv.ask('Hallo, ich bin Chatflix. Wie kann ich dir helfen?')
-})
-
 app.intent('InformationIntent', (conv, params) => {
     console.log(conv.intent);
     console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
     //decide between film and series
-    if(input!=''){
-        console.log(input);
+    if(input !== '') {
         const information = dataHandler.getInformation(input);        
         conv.ask('Hier sind Informationen zu deiner Suche:\n' +information);
         conv.ask('Möchtest du noch mehr Informationen zu den Schauspielern erfahren?')
+    }
+    else {
+        conv.ask('Leider habe ich diesen Film nicht gefunden. Probiere es mit einem anderem.')
     }
 });
 
@@ -48,9 +46,14 @@ app.intent('ActorInformationIntent', (conv, params) => {
     console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
-    let actors = dataHandler.getActors(input);
-    actors.forEach(s => resultString = resultString + '\n' + s);
-    conv.ask('Es spielen folgende Schauspieler mit: \n' +resultString);
+    if(input !== '') {
+        let actors = dataHandler.getActors(input);
+        actors.forEach(s => resultString = resultString + '\n' + s);
+        conv.ask('Es spielen folgende Schauspieler mit: \n' +resultString);
+    }
+    else {
+        conv.ask('Leider habe ich diesen Film nicht gefunden. Probiere es mit einem anderem.')
+    }
 });
 
 app.intent('GenreIntent', (conv, params) => {

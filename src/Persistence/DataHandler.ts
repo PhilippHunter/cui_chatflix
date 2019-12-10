@@ -15,7 +15,7 @@ export class DataHandler{
                 console.log(information);
                 return information;
             }
-        }    
+        }
     }
     
     getMoviesInGenre(genre:any) {
