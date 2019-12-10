@@ -6,12 +6,13 @@ export class DataHandler{
         //iterating through object
         for (var key in data) {          
             //getting value
-            const curName = data[key].name;
+            const curName = JSON.stringify(data[key]['name']).slice(1,-1);
 
             //comparing names
             if(curName.localeCompare(name)==0){
+
                 //getting information for name
-                const information = data[key].information;
+                const information = JSON.stringify(data[key]['information']).slice(1,-1);
                 console.log(information);
                 return information;
             }
@@ -23,13 +24,13 @@ export class DataHandler{
         
         for (var key in data) {          
             //getting value
-            const curGenre = data[key].genre
+            const curGenre = JSON.stringify(data[key]['genre']).slice(1,-1);
             
             //comparing names
             if(curGenre.localeCompare(genre)==0) {
 
                 //getting information for name
-                const movieName = data[key].name;
+                const movieName = JSON.stringify(data[key]['name']).slice(1,-1);
                 console.log(movieName);
                 result.push(movieName);
             }       
