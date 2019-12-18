@@ -11,7 +11,8 @@
             "David Spade",
             "Rob Schneider",
             "Salma Hayek"
-        ]
+        ],
+        "rating": 3
     },
     "entry2":{
         "name": "Suits",
@@ -25,7 +26,8 @@
             "Rick Hoffman",
             "Sarah Rafferty",
             "Gina Torres"
-        ]
+        ],
+        "rating": 5
     }, 
     "entry3":{
         "name": "Stranger Things",
@@ -39,7 +41,8 @@
             "Millie Bobby Brown",
             "Gaten Matarazzo",
             "Caleb McLaughlin"
-        ]
+        ],
+        "rating": 2
     },
     "entry4":{
         "name": "American Horror Story",
@@ -53,7 +56,8 @@
             "Taissa Farmiga",
             "Denis O'Hare",
             "Jessica Lange"
-        ]
+        ],
+        "rating": 2
     },
     "entry5":{
         "name": "Inception",
@@ -67,7 +71,8 @@
             "Marion Cotillard",
             "Ellen Page",
             "Tom Hardy"
-        ]
+        ],
+        "rating": 5
     },
     "entry6":{
         "name": "Avengers Endgame",
@@ -81,7 +86,8 @@
             "Mark Ruffalo",
             "Paul Rudd",
             "Jeremy Renner"
-        ]
+        ],
+        "rating": 4
     },
     "entry7":{
         "name": "The Dark Knight",
@@ -95,7 +101,8 @@
             "Aaron Eckhart",
             "Maggie Gyllenhaal",
             "Michael Caine"
-        ]
+        ],
+        "rating": 1
     },
     "entry8":{
         "name": "Pulp Fiction",
@@ -109,7 +116,8 @@
             "Bruce Willis",
             "Harvey Keitel",
             "Maria de Medeiros"
-        ]
+        ],
+        "rating": 2
     },
     "entry9":{
         "name": "Hangover",
@@ -123,7 +131,8 @@
             "Justin Bartha",
             "Heather Graham",
             "Sasha Barrese"
-        ]
+        ],
+        "rating": 3
     },
     "entry10":{
         "name": "Deadpool",
@@ -137,7 +146,8 @@
             "T. J. Miller",
             "Gina Carano",
             "Stefan Kapičić"
-        ]
+        ],
+        "rating": 5
     },
     "entry11":{
         "name": "21 Jump Street",
@@ -151,7 +161,8 @@
             "Dave Franco",
             "Rob Riggle",
             "DeRay Davis"
-        ]
+        ],
+        "rating": 3
     },
     "entry12":{
         "name": "Die Hochzeits-Crasher",
@@ -165,7 +176,8 @@
             "Rachel McAdams",
             "Isla Fisher",
             "Jane Seymour"
-        ]
+        ],
+        "rating": 2
     },
     "entry13":{
         "name": "Breaking Bad",
@@ -179,7 +191,8 @@
             "RJ Mitte",
             "Dean Norris",
             "Betsy Brandt"
-        ]
+        ],
+        "rating": 4
     },
     "entry14":{
         "name": "The Walking Dead",
@@ -193,7 +206,8 @@
             "Josh McDermitt",
             "Christian Serratos",
             "Seth Gilliam"
-        ]
+        ],
+        "rating": 3
     },
     "entry15":{
         "name": "Black Mirror",
@@ -207,7 +221,8 @@
             "Daniel Kaluuya",
             "Cristin Milioti",
             "Michaela Coel"
-        ]
+        ],
+        "rating": 5
     },
     "entry16":{
         "name": "Tote Mädchen lügen nicht",
@@ -221,7 +236,8 @@
             "Brandon Flynn",
             "Justin Prentice",
             "Ross Butler"
-        ]
+        ],
+        "rating": 3
     },
     "entry17":{
         "name": "House of Cards",
@@ -235,7 +251,8 @@
             "Kate Mara",
             "Corey Stoll",
             "Sakina Jaffrey"
-        ]
+        ],
+        "rating": 2
     },
     "entry18":{
         "name": "Haus des Geldes",
@@ -249,7 +266,8 @@
             "Miguel Herrán",
             "Alba Flores",
             "Jaime Lorente"
-        ]
+        ],
+        "rating": 5
     },
     "entry19":{
         "name": "Narcos",
@@ -263,7 +281,8 @@
             "Alberto Ammann",
             "Paulina Gaitán",
             "Jorge Monterrosa"
-        ]
+        ],
+        "rating": 2
     },
     "entry20":{
         "name": "Prison Break",
@@ -277,6 +296,7 @@
             "Robert Knepper",
             "Wade Williams",
             "Sarah Wayne Callies"
-        ]
+        ],
+        "rating": 2
     }
 }

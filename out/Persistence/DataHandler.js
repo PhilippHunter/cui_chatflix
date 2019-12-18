@@ -77,6 +77,17 @@ class DataHandler {
         }
         return result;
     }
+    getMostLikedMovies() {
+        let result = [];
+        for (var key in data) {
+            //getting value
+            const curRating = data[key].rating;
+            if (curRating > 4) {
+                result.push(data[key].name);
+            }
+        }
+        return result;
+    }
 }
 exports.DataHandler = DataHandler;
 //# sourceMappingURL=DataHandler.js.map

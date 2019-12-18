@@ -67,6 +67,16 @@ app.intent('InspirationWatchlistIntent', (conv) => {
     }
     conv.ask(resultString);
 });
+app.intent('InspirationCurrentlyLikedIntent', (conv) => {
+    let resultString = '';
+    let result = dataHandler.getMostLikedMovies();
+    if (result.length != 0) {
+        console.log(result);
+        conv.ask('Hier sind ein paar Vorschläge:');
+        result.forEach(s => resultString = resultString + '\n' + s);
+    }
+    conv.ask(resultString);
+});
 app.intent('WatchlistIntent', (conv, params) => {
     console.log(conv.intent);
     console.log(params);
