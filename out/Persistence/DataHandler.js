@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const data = require("../data.json");
+const watchlist = require("../watchlist.json");
+const fs = require("fs");
 class DataHandler {
     getInformation(name) {
         //iterating through object
@@ -44,6 +46,36 @@ class DataHandler {
                 return actors;
             }
         }
+    }
+    addToWatchlist(name) {
+        //iterating through object
+        for (var key in data) {
+            //getting value
+            const curName = data[key].name;
+            //comparing names
+            if (curName.localeCompare(name) == 0) {
+                for (var entry in watchlist) {
+                    if (watchlist[entry].name.localeCompare(name) == 0) {
+                        return false;
+                    }
+                    else {
+                        watchlist.push(data[key]);
+                        var json = JSON.stringify(watchlist) + '\n';
+                        fs.writeFileSync('src/watchlist.json', json);
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+    getMoviesInWatchlist() {
+        let result = [];
+        for (var key in watchlist) {
+            //getting value
+            const curName = watchlist[key].name;
+            result.push(curName);
+        }
+        return result;
     }
 }
 exports.DataHandler = DataHandler;

@@ -57,6 +57,32 @@ app.intent('GenreIntent', (conv, params) => {
     }
     conv.ask(resultString);
 });
+app.intent('InspirationWatchlistIntent', (conv) => {
+    let resultString = '';
+    let result = dataHandler.getMoviesInWatchlist();
+    if (result.length != 0) {
+        console.log(result);
+        conv.ask('Hier sind ein paar Vorschläge:');
+        result.forEach(s => resultString = resultString + '\n' + s);
+    }
+    conv.ask(resultString);
+});
+app.intent('WatchlistIntent', (conv, params) => {
+    console.log(conv.intent);
+    console.log(params);
+    const input = params.Serie ? params.Serie : params.Film;
+    if (input !== '') {
+        if (dataHandler.addToWatchlist(input)) {
+            conv.ask('Ich habe ' + input + ' zu deiner Watchlist hinzugefügt');
+        }
+        else {
+            conv.ask(input + ' befindet sich bereits in deiner Watchlist');
+        }
+    }
+    else {
+        conv.ask('Leider habe ich diesen Film nicht gefunden. Probiere es mit einem anderem.');
+    }
+});
 app.fallback((conv) => {
     const intent = conv.intent;
     conv.close('Ok, thanks!');
