@@ -71,12 +71,12 @@ app.intent('InspirationWatchlistIntent', (conv) => {
     let result = dataHandler.getMoviesInWatchlist();
     if (result.length != 0) {
         console.log(result);
-        conv.ask('Hier sind ein paar Vorschläge:');
+        conv.ask('Folgende Titel befinden sich in deiner Watchlist:');
         result.forEach(s => resultString = resultString + '\n' + s);
         conv.ask(resultString);
     }
     else {
-        conv.ask('Leider befinden sich momentan noch keine Filme in deiner Watchlist.');
+        conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
     }
 });
 app.intent('InspirationCurrentlyLikedIntent', (conv) => {
@@ -84,7 +84,7 @@ app.intent('InspirationCurrentlyLikedIntent', (conv) => {
     let result = dataHandler.getMostLikedMovies();
     if (result.length != 0) {
         console.log(result);
-        conv.ask('Hier sind ein paar Vorschläge:');
+        conv.ask('Titel mit den besten Bewertungen:');
         result.forEach(s => resultString = resultString + '\n' + s);
     }
     conv.ask(resultString);
@@ -94,7 +94,7 @@ app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
     let result = dataHandler.getMostLikedMovies();
     if (result.length != 0) {
         console.log(result);
-        conv.ask('Hier sind ein paar Vorschläge:');
+        conv.ask('Titel mit den besten Bewertungen:');
         result.forEach(s => resultString = resultString + '\n' + s);
     }
     conv.ask(resultString);
@@ -105,14 +105,14 @@ app.intent('AppendWatchlistIntent', (conv, params) => {
     const input = params.Serie ? params.Serie : params.Film;
     if (input !== '') {
         if (dataHandler.addToWatchlist(input)) {
-            conv.ask('Ich habe ' + input + ' zu deiner Watchlist hinzugefügt');
+            conv.ask('Ich habe ' + input + ' zu deiner Watchlist hinzugefügt.');
         }
         else {
-            conv.ask(input + ' befindet sich bereits in deiner Watchlist');
+            conv.ask(input + ' befindet sich bereits in deiner Watchlist.');
         }
     }
     else {
-        conv.ask('Leider habe ich diesen Film nicht gefunden. Probiere es mit einem anderem.');
+        conv.ask('Leider habe ich diesen Titel nicht gefunden. Probiere es mit einem anderen.');
     }
 });
 app.intent('ShowWatchlistIntent', (conv, params) => {
@@ -122,12 +122,12 @@ app.intent('ShowWatchlistIntent', (conv, params) => {
     let result = dataHandler.getMoviesInWatchlist();
     if (result.length != 0) {
         console.log(result);
-        conv.ask('Hier sind ein paar Vorschläge:');
+        conv.ask('Folgende Titel befinden sich in deiner Watchlist:');
         result.forEach(s => resultString = resultString + '\n' + s);
         conv.ask(resultString);
     }
     else {
-        conv.ask('Leider befinden sich momentan noch keine Filme in deiner Watchlist.');
+        conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
     }
 });
 app.fallback((conv) => {
