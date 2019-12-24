@@ -102,6 +102,17 @@ app.intent('InspirationCurrentlyLikedIntent', (conv) => {
     conv.ask(resultString);
 })
 
+app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
+    let resultString: string = '';
+    let result = dataHandler.getMostLikedMovies();
+    if(result.length != 0) {
+        console.log(result)
+        conv.ask('Hier sind ein paar Vorschläge:')
+        result.forEach(s => resultString = resultString + '\n' + s);
+    }
+    conv.ask(resultString);
+})
+
 app.intent('AppendWatchlistIntent', (conv, params) => {
     console.log(conv.intent);
     console.log(params);
