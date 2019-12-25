@@ -21,6 +21,36 @@ app.intent('InformationIntent', (conv, params) => {
         conv.ask('Leider habe ich den gewünschten Titel nicht gefunden. Probiere es mit einem anderen.');
     }
 });
+app.intent('SuggestionInformationIntent_2', (conv, params) => {
+    console.log(conv.intent);
+    console.log(params);
+    const input = params.Serie ? params.Serie : params.Film;
+    //decide between film and series
+    if (input !== '') {
+        const information = dataHandler.getInformation(input);
+        conv.ask('Hier sind Informationen zu deiner Suche:\n' + information);
+        conv.ask('Möchtest du noch mehr Informationen zu den Schauspielern erfahren?');
+    }
+    else {
+        conv.ask('Leider habe ich den gewünschten Titel nicht gefunden. Probiere es mit einem anderen.');
+    }
+});
+app.intent('ActorInformationSuggestionIntent', (conv, params) => {
+    let resultString = '';
+    console.log(conv.intent);
+    console.log(params);
+    let parameters = conv.contexts.get('suggestioninformationintent_2-followup').parameters;
+    const input = parameters.Serie ? parameters.Serie : parameters.Film;
+    console.log(input);
+    if (input !== '') {
+        let actors = dataHandler.getActors(input);
+        actors.forEach(s => resultString = resultString + '\n' + s);
+        conv.ask('Es spielen folgende Schauspieler mit: \n' + resultString);
+    }
+    else {
+        conv.ask('Leider habe den gewünschten Titel nicht gefunden. Probiere es mit einem anderen.');
+    }
+});
 app.intent('ActorInformation-FollowupIntent', (conv, params) => {
     let resultString = '';
     console.log(conv.intent);
