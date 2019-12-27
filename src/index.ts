@@ -1,11 +1,9 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
-import * as uuidv4 from 'uuid'
 
-import { dialogflow, Permission, BasicCard, Image} from 'actions-on-google'
+import { dialogflow, Permission, BasicCard, Image, Carousel} from 'actions-on-google'
 import { DataHandler } from './Persistence/DataHandler'
-
-let isUserKnown: boolean = false
+import { utils } from './utils'
 
 const app = dialogflow({debug: true})
 
@@ -99,11 +97,10 @@ app.intent('GenreIntent', (conv, params) => {
     console.log(genre);
     let result = dataHandler.getMoviesInGenre(genre);
     if(result.length !== 0) {
-        console.log(result);
         conv.ask('Hier sind ein paar Vorschläge:')
-        let resultString = '';
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
+        //create carousel from recieved titles
+        let carousel : Carousel = utils.createCarousel(result);
+        conv.ask(carousel);
     }
     else {
         conv.ask('Leider habe ich keinen Titel im gewünschten Genre gefunden. Probiere es mit einem anderen.');
@@ -116,8 +113,9 @@ app.intent('InspirationWatchlistIntent', (conv) => {
     if(result.length != 0) {
         console.log(result)
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:')
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
+        //create carousel from recieved titles
+        let carousel : Carousel = utils.createCarousel(result);
+        conv.ask(carousel);
     }
     else {
         conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
@@ -125,25 +123,31 @@ app.intent('InspirationWatchlistIntent', (conv) => {
 })
 
 app.intent('InspirationCurrentlyLikedIntent', (conv) => {
-    let resultString: string = '';
     let result = dataHandler.getMostLikedMovies();
     if(result.length != 0) {
         console.log(result)
         conv.ask('Titel mit den besten Bewertungen:')
-        result.forEach(s => resultString = resultString + '\n' + s);
+        //create carousel from recieved titles
+        let carousel : Carousel = utils.createCarousel(result);
+        conv.ask(carousel);
+    } 
+    else {
+        conv.ask('Es ist ein Fehler aufgetreten. Keine Titel gefunden.')
     }
-    conv.ask(resultString);
 })
 
 app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
-    let resultString: string = '';
     let result = dataHandler.getMostLikedMovies();
     if(result.length != 0) {
         console.log(result)
         conv.ask('Titel mit den besten Bewertungen:')
-        result.forEach(s => resultString = resultString + '\n' + s);
+        //create carousel from recieved titles
+        let carousel : Carousel = utils.createCarousel(result);
+        conv.ask(carousel);
+    } 
+    else {
+        conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.')
     }
-    conv.ask(resultString);
 })
 
 app.intent('AppendWatchlistIntent', (conv, params) => {
@@ -168,16 +172,16 @@ app.intent('ShowWatchlistIntent', (conv, params) => {
     //CODE DUPLIKAT!
 
     console.log(params);
-    let resultString: string = '';
     let result = dataHandler.getMoviesInWatchlist();
     if(result.length != 0) {
         console.log(result)
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:')
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
-    }
+        //create carousel from recieved titles
+        let carousel : Carousel = utils.createCarousel(result);
+        conv.ask(carousel);
+    } 
     else {
-        conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
+        conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.')
     }
 })
 
