@@ -2,7 +2,7 @@ import * as express from 'express'
 import * as bodyParser from 'body-parser'
 import * as uuidv4 from 'uuid'
 
-import { dialogflow, Permission} from 'actions-on-google'
+import { dialogflow, Permission, BasicCard, Image} from 'actions-on-google'
 import { DataHandler } from './Persistence/DataHandler'
 
 let isUserKnown: boolean = false
@@ -178,6 +178,57 @@ app.intent('ShowWatchlistIntent', (conv, params) => {
     }
     else {
         conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
+    }
+})
+
+app.intent('PlayTrailerIntent', (conv, params) => {
+    let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+    if(title !== '') {
+        conv.ask('Hier ist der Trailer zu '+title+':')
+        conv.ask(new BasicCard({
+            title: title,
+            image: new Image({
+                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                alt: 'play_image'
+            })
+        }))
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.')
+    }
+})
+
+app.intent('PlayMovieIntent', (conv, params) => {
+    let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+    if(title !== '') {
+        conv.ask('Okay, ich starte '+title+':')
+        conv.ask(new BasicCard({
+            title: title,
+            image: new Image({
+                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                alt: 'play_image'
+            })
+        }))
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.')
+    }
+})
+
+app.intent('PlaySeriesIntent', (conv, params) => {
+    let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+    if(title !== '') {
+        conv.ask('Okay, hier ist Staffel '+params.Season+', Folge '+params.number+' von '+title+':')
+        conv.ask(new BasicCard({
+            title: title,
+            image: new Image({
+                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                alt: 'play_image'
+            })
+        }))
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.')
     }
 })
 
