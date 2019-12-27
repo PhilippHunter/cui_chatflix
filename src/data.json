@@ -12,7 +12,8 @@
             "Rob Schneider",
             "Salma Hayek"
         ],
-        "rating": 3
+        "rating": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry2":{
         "name": "Suits",
@@ -28,6 +29,7 @@
             "Gina Torres"
         ],
         "rating": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 9,
         "episodes": 16
     }, 
@@ -45,6 +47,7 @@
             "Caleb McLaughlin"
         ],
         "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 3,
         "episodes": 13
     },
@@ -62,6 +65,7 @@
             "Jessica Lange"
         ],
         "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 3,
         "episodes": 12
     },
@@ -78,7 +82,8 @@
             "Ellen Page",
             "Tom Hardy"
         ],
-        "rating": 5
+        "rating": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry6":{
         "name": "Avengers Endgame",
@@ -93,7 +98,8 @@
             "Paul Rudd",
             "Jeremy Renner"
         ],
-        "rating": 4
+        "rating": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry7":{
         "name": "The Dark Knight",
@@ -108,7 +114,8 @@
             "Maggie Gyllenhaal",
             "Michael Caine"
         ],
-        "rating": 1
+        "rating": 1,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry8":{
         "name": "Pulp Fiction",
@@ -123,7 +130,8 @@
             "Harvey Keitel",
             "Maria de Medeiros"
         ],
-        "rating": 2
+        "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry9":{
         "name": "Hangover",
@@ -138,7 +146,8 @@
             "Heather Graham",
             "Sasha Barrese"
         ],
-        "rating": 3
+        "rating": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry10":{
         "name": "Deadpool",
@@ -153,7 +162,8 @@
             "Gina Carano",
             "Stefan Kapičić"
         ],
-        "rating": 5
+        "rating": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry11":{
         "name": "21 Jump Street",
@@ -168,7 +178,8 @@
             "Rob Riggle",
             "DeRay Davis"
         ],
-        "rating": 3
+        "rating": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry12":{
         "name": "Die Hochzeits-Crasher",
@@ -183,7 +194,8 @@
             "Isla Fisher",
             "Jane Seymour"
         ],
-        "rating": 2
+        "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
     },
     "entry13":{
         "name": "Breaking Bad",
@@ -199,6 +211,7 @@
             "Betsy Brandt"
         ],
         "rating": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 5,
         "episodes": 20
     },
@@ -216,6 +229,7 @@
             "Seth Gilliam"
         ],
         "rating": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 10,
         "episodes": 13
     },
@@ -233,6 +247,7 @@
             "Michaela Coel"
         ],
         "rating": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 5,
         "episodes": 5
     },
@@ -250,6 +265,7 @@
             "Ross Butler"
         ],
         "rating": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 3,
         "episodes": 13
     },
@@ -267,6 +283,7 @@
             "Sakina Jaffrey"
         ],
         "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 6,
         "episodes": 13
     },
@@ -284,6 +301,7 @@
             "Jaime Lorente"
         ],
         "rating": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 3,
         "episodes": 13
     },
@@ -301,6 +319,7 @@
             "Jorge Monterrosa"
         ],
         "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
         "seasons": 1,
         "episodes": 10
     },
@@ -318,6 +337,7 @@
             "Sarah Wayne Callies"
         ],
         "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Prison_Break_%28miniseries%29.jpg/220px-Prison_Break_%28miniseries%29.jpg",
         "seasons": 5,
         "episodes": 22
     }
