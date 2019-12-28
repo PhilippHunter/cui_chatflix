@@ -114,4 +114,43 @@ export class DataHandler {
         }
         return result
     }
+
+    checkIfExistent(title, season, episode){
+        //extracting season number
+        let seasonNumber = parseInt(season.match(/\d+/)[0]);
+
+         //iterating through object
+         for (var key in data) {
+            //getting value
+            const curName = data[key].name;
+
+            //comparing names
+            if (curName.localeCompare(title) == 0) {
+                //getting maxSeasons for name
+                let maxSeasons = data[key].seasons;
+
+                //comparing season numbers
+                if(seasonNumber>maxSeasons){
+                    let returnArray = [false, maxSeasons, data[key].episodes];
+                    return returnArray;
+                    
+                }
+                //if season number exists...
+                else{
+                    //getting maxEpisodes 
+                    let maxEpisodes = data[key].episodes;
+
+                    //comparing episode numbers
+                    if(episode>maxEpisodes){
+                        let returnArray = [false, maxSeasons, data[key].episodes];
+                        return returnArray;
+                        
+                    }
+                }
+                //if not yet returned...
+                let returnArray = [true, maxSeasons, data[key].episodes];
+                return returnArray;
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const actions_on_google_1 = require("actions-on-google");
 const DataHandler_1 = require("./Persistence/DataHandler");
-let isUserKnown = false;
+const utils_1 = require("./utils");
 const app = actions_on_google_1.dialogflow({ debug: true });
 const dataHandler = new DataHandler_1.DataHandler();
 app.intent('InformationIntent', (conv, params) => {
@@ -86,11 +86,10 @@ app.intent('GenreIntent', (conv, params) => {
     console.log(genre);
     let result = dataHandler.getMoviesInGenre(genre);
     if (result.length !== 0) {
-        console.log(result);
         conv.ask('Hier sind ein paar Vorschläge:');
-        let resultString = '';
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
+        //create carousel from recieved titles
+        let carousel = utils_1.utils.createCarousel(result);
+        conv.ask(carousel);
     }
     else {
         conv.ask('Leider habe ich keinen Titel im gewünschten Genre gefunden. Probiere es mit einem anderen.');
@@ -102,32 +101,39 @@ app.intent('InspirationWatchlistIntent', (conv) => {
     if (result.length != 0) {
         console.log(result);
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:');
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
+        //create carousel from recieved titles
+        let carousel = utils_1.utils.createCarousel(result);
+        conv.ask(carousel);
     }
     else {
         conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
     }
 });
 app.intent('InspirationCurrentlyLikedIntent', (conv) => {
-    let resultString = '';
     let result = dataHandler.getMostLikedMovies();
     if (result.length != 0) {
         console.log(result);
         conv.ask('Titel mit den besten Bewertungen:');
-        result.forEach(s => resultString = resultString + '\n' + s);
+        //create carousel from recieved titles
+        let carousel = utils_1.utils.createCarousel(result);
+        conv.ask(carousel);
     }
-    conv.ask(resultString);
+    else {
+        conv.ask('Es ist ein Fehler aufgetreten. Keine Titel gefunden.');
+    }
 });
 app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
-    let resultString = '';
     let result = dataHandler.getMostLikedMovies();
     if (result.length != 0) {
         console.log(result);
         conv.ask('Titel mit den besten Bewertungen:');
-        result.forEach(s => resultString = resultString + '\n' + s);
+        //create carousel from recieved titles
+        let carousel = utils_1.utils.createCarousel(result);
+        conv.ask(carousel);
     }
-    conv.ask(resultString);
+    else {
+        conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.');
+    }
 });
 app.intent('AppendWatchlistIntent', (conv, params) => {
     console.log(conv.intent);
@@ -148,16 +154,81 @@ app.intent('AppendWatchlistIntent', (conv, params) => {
 app.intent('ShowWatchlistIntent', (conv, params) => {
     //CODE DUPLIKAT!
     console.log(params);
-    let resultString = '';
     let result = dataHandler.getMoviesInWatchlist();
     if (result.length != 0) {
         console.log(result);
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:');
-        result.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask(resultString);
+        //create carousel from recieved titles
+        let carousel = utils_1.utils.createCarousel(result);
+        conv.ask(carousel);
     }
     else {
-        conv.ask('Leider befinden sich momentan noch keine Titel in deiner Watchlist.');
+        conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.');
+    }
+});
+app.intent('PlayTrailerIntent', (conv, params) => {
+    let title = params.Serie ? params.Serie.toString() : params.Film.toString();
+    if (title !== '') {
+        conv.ask('Hier ist der Trailer zu ' + title + ':');
+        conv.ask(new actions_on_google_1.BasicCard({
+            title: title,
+            image: new actions_on_google_1.Image({
+                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                alt: 'play_image'
+            })
+        }));
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.');
+    }
+});
+app.intent('PlayMovieIntent', (conv, params) => {
+    let title = params.Serie ? params.Serie.toString() : params.Film.toString();
+    if (title !== '') {
+        conv.ask('Okay, ich starte ' + title + ':');
+        conv.ask(new actions_on_google_1.BasicCard({
+            title: title,
+            image: new actions_on_google_1.Image({
+                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                alt: 'play_image'
+            })
+        }));
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.');
+    }
+});
+app.intent('PlaySeriesIntent', (conv, params) => {
+    console.log(params);
+    //saving parameters
+    let season = params.Season;
+    let episode = params.number;
+    let title = params.Serie.toString();
+    //checing if title exists
+    if (title !== '') {
+        //checking if season and episodes exist -> returns array [true/false, maxSeasonNumber, maxEpisodeNumber]
+        let returnArray = dataHandler.checkIfExistent(title, season, episode);
+        //if seasons and episodes exist
+        if (returnArray[0]) {
+            conv.ask('Okay, hier ist ' + params.Season + ', Folge ' + params.number + ' von ' + title + ':');
+            conv.ask(new actions_on_google_1.BasicCard({
+                title: title,
+                image: new actions_on_google_1.Image({
+                    url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                    alt: 'play_image'
+                })
+            }));
+        }
+        //if season or episode does not exist
+        else {
+            //get maxNumbers for Output
+            let maxSeasons = returnArray[1].toString();
+            let maxEpisodes = returnArray[2].toString();
+            conv.ask('Leider existiert die angegebene Staffel oder Episode nicht. ' + title + ' hat ' + maxSeasons + ' Staffeln mit je ' + maxEpisodes + ' Folgen.');
+        }
+    }
+    else {
+        conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.');
     }
 });
 app.fallback((conv) => {

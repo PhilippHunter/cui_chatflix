@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const data = require("../data.json");
 const watchlist = require("../watchlist.json");
 const fs = require("fs");
+const Title_js_1 = require("../Models/Title.js");
 class DataHandler {
     getInformation(name) {
         //iterating through object
@@ -25,10 +26,9 @@ class DataHandler {
             const curGenre = data[key].genre;
             //comparing names
             if (curGenre.localeCompare(genre) == 0) {
-                //getting information for name
-                const movieName = data[key].name;
-                console.log(movieName);
-                result.push(movieName);
+                //getting entry with matching genre
+                const title = new Title_js_1.Title(data[key].name, data[key].information, data[key].image_url);
+                result.push(title);
             }
         }
         return result;
@@ -71,9 +71,8 @@ class DataHandler {
     getMoviesInWatchlist() {
         let result = [];
         for (var key in watchlist) {
-            //getting value
-            const curName = watchlist[key].name;
-            result.push(curName);
+            const title = new Title_js_1.Title(watchlist[key].name, watchlist[key].information, watchlist[key].image_url);
+            result.push(title);
         }
         return result;
     }
@@ -83,10 +82,43 @@ class DataHandler {
             //getting value
             const curRating = data[key].rating;
             if (curRating > 4) {
-                result.push(data[key].name);
+                const title = new Title_js_1.Title(data[key].name, data[key].information, data[key].image_url);
+                result.push(title);
             }
         }
         return result;
+    }
+    checkIfExistent(title, season, episode) {
+        //extracting season number
+        let seasonNumber = parseInt(season.match(/\d+/)[0]);
+        //iterating through object
+        for (var key in data) {
+            //getting value
+            const curName = data[key].name;
+            //comparing names
+            if (curName.localeCompare(title) == 0) {
+                //getting maxSeasons for name
+                let maxSeasons = data[key].seasons;
+                //comparing season numbers
+                if (seasonNumber > maxSeasons) {
+                    let returnArray = [false, maxSeasons, data[key].episodes];
+                    return returnArray;
+                }
+                //if season number exists...
+                else {
+                    //getting maxEpisodes 
+                    let maxEpisodes = data[key].episodes;
+                    //comparing episode numbers
+                    if (episode > maxEpisodes) {
+                        let returnArray = [false, maxSeasons, data[key].episodes];
+                        return returnArray;
+                    }
+                }
+                //if not yet returned...
+                let returnArray = [true, maxSeasons, data[key].episodes];
+                return returnArray;
+            }
+        }
     }
 }
 exports.DataHandler = DataHandler;

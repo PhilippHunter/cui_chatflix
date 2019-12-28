@@ -220,16 +220,39 @@ app.intent('PlayMovieIntent', (conv, params) => {
 })
 
 app.intent('PlaySeriesIntent', (conv, params) => {
-    let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+    console.log(params);
+
+    //saving parameters
+    let season = params.Season;
+    let episode = params.number;
+    let title:string = params.Serie.toString();
+
+    //checing if title exists
     if(title !== '') {
-        conv.ask('Okay, hier ist Staffel '+params.Season+', Folge '+params.number+' von '+title+':')
-        conv.ask(new BasicCard({
-            title: title,
-            image: new Image({
-                url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
-                alt: 'play_image'
-            })
-        }))
+
+        //checking if season and episodes exist -> returns array [true/false, maxSeasonNumber, maxEpisodeNumber]
+        let returnArray = dataHandler.checkIfExistent(title, season, episode);
+
+        //if seasons and episodes exist
+        if(returnArray[0]){
+            conv.ask('Okay, hier ist '+params.Season+', Folge '+params.number+' von '+title+':')
+            conv.ask(new BasicCard({
+                title: title,
+                image: new Image({
+                    url: 'https://images.assetsdelivery.com/compings_v2/4zevar/4zevar1509/4zevar150900035.jpg',
+                    alt: 'play_image'
+                })
+            }))
+        }
+
+        //if season or episode does not exist
+        else{
+            //get maxNumbers for Output
+            let maxSeasons = returnArray[1].toString();
+            let maxEpisodes = returnArray[2].toString();
+
+            conv.ask('Leider existiert die angegebene Staffel oder Episode nicht. ' + title + ' hat ' + maxSeasons +' Staffeln mit je '+maxEpisodes+' Folgen.')
+        }       
     }
     else {
         conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.')
