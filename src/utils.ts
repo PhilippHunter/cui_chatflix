@@ -1,4 +1,4 @@
-import { Carousel, Image } from "actions-on-google";
+import { Carousel, Image, List } from "actions-on-google";
 import { Title } from "./Models/Title";
 
 export class utils {
@@ -22,5 +22,21 @@ export class utils {
         })
 
         return carousel;
+    }
+
+    static createList(actors : string[]) : List {
+        let items = {};
+        let counter = 0;
+        actors.forEach(actor => {
+            let key = 'SELECTION-'+counter.toString();
+            items[key] = new Object({title: actor})
+            counter++;
+        })
+
+        const list : List = new List({
+            items: items
+        });
+        
+        return list;
     }
 }

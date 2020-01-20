@@ -1,7 +1,7 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
 
-import { dialogflow, Permission, BasicCard, Image, Carousel} from 'actions-on-google'
+import { dialogflow, Permission, BasicCard, Image, Carousel, List} from 'actions-on-google'
 import { DataHandler } from './Persistence/DataHandler'
 import { utils } from './utils'
 
@@ -77,15 +77,15 @@ app.intent('ActorInformation-FollowupIntent', (conv, params) => {
 });
 
 app.intent('ActorInformationIntent', (conv, params) => {
-    let resultString:string = '';
     console.log(conv.intent);
     console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
     if(input !== '') {
         let actors = dataHandler.getActors(input);
-        actors.forEach(s => resultString = resultString + '\n' + s);
-        conv.ask('Es spielen folgende Schauspieler mit: \n' +resultString);
+        conv.ask('Es spielen folgende Schauspieler mit:');
+        let list : List = utils.createList(actors);
+        conv.ask(list);
     }
     else {
         conv.ask('Leider habe ich den gewünschten Titel nicht gefunden. Probiere es mit einem anderen.')
@@ -108,7 +108,6 @@ app.intent('GenreIntent', (conv, params) => {
 })
 
 app.intent('InspirationWatchlistIntent', (conv) => {
-    let resultString: string = '';
     let result = dataHandler.getMoviesInWatchlist();
     if(result.length != 0) {
         console.log(result)
