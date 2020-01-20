@@ -7,12 +7,12 @@ export class utils {
         let counter = 0;
         titles.forEach(title => {
             let obj = {}
+            let key = 'SELECTION-'+counter.toString();
             obj['title'] = title.name;
             obj['image'] = new Image({
                 url: title.image_url,
                 alt: title.name
             })
-            let key = 'SELECTION-'+counter.toString();
             items[key] = obj;
             counter++;
         })        

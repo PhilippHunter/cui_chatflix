@@ -1,5 +1,5 @@
 {
-    "entry1":{
+    "entry1": {
         "name": "Kindsköpfe",
         "information": "Kindsköpfe ist eine US-amerikanische Komödie mit Adam Sandler, Kevin James, Chris Rock, David Spade und Rob Schneider aus dem Jahr 2010.",
         "genre": "Comedy",
@@ -13,9 +13,9 @@
             "Salma Hayek"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry2":{
+    "entry2": {
         "name": "Suits",
         "information": "Suits ist eine US-amerikanische Anwaltsserie mit Gabriel Macht und Patrick J. Adams (Staffel 1–7) in den Hauptrollen. Die Erstausstrahlung erfolgte in den USA am 23. Juni 2011 beim US-Kabelsender USA Network sowie am 7. Januar 2013 bei FOX in Deutschland.",
         "genre": "Legal Drama",
@@ -29,11 +29,11 @@
             "Gina Torres"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Suits_season_7_dvd_cover.jpg/220px-Suits_season_7_dvd_cover.jpg",
         "seasons": 9,
         "episodes": 16
-    }, 
-    "entry3":{
+    },
+    "entry3": {
         "name": "Stranger Things",
         "information": "Stranger Things ist eine US-amerikanische Science-Fiction-Mysteryserie, die am 15. Juli 2016 beim US-amerikanischen Video-on-Demand-Anbieter Netflix veröffentlicht wurde. Es finden sich zahlreiche visuelle Referenzen an bekannte Filme aus den 1970er- und 80er-Jahren wie Die Goonies, E.T., Alien, Stand by Me, Poltergeist, Shining, Unheimliche Begegnung der dritten Art, Zurück in die Zukunft und andere.",
         "genre": "Science-Fiction",
@@ -47,11 +47,11 @@
             "Caleb McLaughlin"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/A1on6o1-ziL._SL1500_.jpg",
         "seasons": 3,
         "episodes": 13
     },
-    "entry4":{
+    "entry4": {
         "name": "American Horror Story",
         "information": "American Horror Story ist eine US-amerikanische Horror-Fernsehserie, die auf einer Idee von Ryan Murphy und Brad Falchuk basiert. Die Serie startete am 5. Oktober 2011 auf dem US-Kabelsender FX. In Deutschland wird die Serie seit dem 9. November 2011 auf dem Pay-TV-Sender FOX ausgestrahlt.",
         "genre": "Horror",
@@ -65,11 +65,11 @@
             "Jessica Lange"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/81ofJXOBCtL._SY445_.jpg",
         "seasons": 3,
         "episodes": 12
     },
-    "entry5":{
+    "entry5": {
         "name": "Inception",
         "information": "Inception ist ein US-amerikanischer Science-Fiction-Heist-Film aus dem Jahr 2010 und der siebte Spielfilm des US-amerikanisch-britischen Regisseurs Christopher Nolan, der auch das Drehbuch verfasste und als Produzent fungierte.",
         "genre": "Science-Fiction",
@@ -83,9 +83,9 @@
             "Tom Hardy"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/912AErFSBHL._SY445_.jpg"
     },
-    "entry6":{
+    "entry6": {
         "name": "Avengers Endgame",
         "information": "Avengers: Endgame ist ein von Marvel Studios produzierter US-amerikanischer Science-Fiction-Actionfilm, der in Teilen auch Eigenschaften eines Filmdramas und Heist-Movies aufweist. Der Film kam am 24. April 2019 in die deutschsprachigen und zwei Tage später in die US-Kinos. Es handelt sich um den 22. Spielfilm innerhalb des Marvel Cinematic Universe (MCU) und den vierten Avengers-Film.",
         "genre": "Science-Fiction",
@@ -99,9 +99,9 @@
             "Jeremy Renner"
         ],
         "rating": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://www.dvd-forum.at/img/uploaded/MV5BMTkxNTQzNTg4Nl5BMl5BanBnXkFtZTgwMzYzNDQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
     },
-    "entry7":{
+    "entry7": {
         "name": "The Dark Knight",
         "information": "The Dark Knight (dt. Der dunkle Ritter) ist ein US-amerikanisch-britisches Actiondrama und eine Comicverfilmung des Regisseurs Christopher Nolan aus dem Jahr 2008, das auf dem von Bob Kane und Bill Finger erschaffenen Batman-Mythos basiert.",
         "genre": "Actiondrama",
@@ -115,9 +115,9 @@
             "Michael Caine"
         ],
         "rating": 1,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry8":{
+    "entry8": {
         "name": "Pulp Fiction",
         "information": "Pulp Fiction ist ein Film von und mit Quentin Tarantino aus dem Jahr 1994. Der Film wurde für sieben Oscars nominiert – darunter in der Kategorie Bester Film – und gewann in der Kategorie Bestes Originaldrehbuch.",
         "genre": "Drama",
@@ -131,9 +131,9 @@
             "Maria de Medeiros"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry9":{
+    "entry9": {
         "name": "Hangover",
         "information": "Hangover (englisch für „Kater“) ist eine US-amerikanische Filmkomödie aus dem Jahr 2009. Der Film bildet den Auftakt der Hangover-Trilogie.",
         "genre": "Comedy",
@@ -147,9 +147,9 @@
             "Sasha Barrese"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://live.staticflickr.com/3661/3617427122_48b2b028c1.jpg"
     },
-    "entry10":{
+    "entry10": {
         "name": "Deadpool",
         "information": "Deadpool ist ein US-amerikanischer Actionfilm mit satirischen Elementen. Die Comicverfilmung basiert auf der Comicfigur Deadpool des Marvel-Verlages. Es handelt sich um den achten Teil der X-Men-Filmreihe. Der Film startete am 11. Februar 2016 in den deutschen Kinos.",
         "genre": "Action",
@@ -163,9 +163,9 @@
             "Stefan Kapičić"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry11":{
+    "entry11": {
         "name": "21 Jump Street",
         "information": "21 Jump Street ist eine US-amerikanische Filmkomödie aus dem Jahr 2012. Es handelt sich um die Kinoadaption der Fernsehserie 21 Jump Street – Tatort Klassenzimmer.",
         "genre": "Comedy",
@@ -179,9 +179,9 @@
             "DeRay Davis"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry12":{
+    "entry12": {
         "name": "Die Hochzeits-Crasher",
         "information": "Die Hochzeits-Crasher (Originaltitel Wedding Crashers) ist eine Filmkomödie des Regisseurs David Dobkin aus dem Jahre 2005 mit Owen Wilson und Vince Vaughn.",
         "genre": "Comedy",
@@ -195,9 +195,9 @@
             "Jane Seymour"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" 
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
     },
-    "entry13":{
+    "entry13": {
         "name": "Breaking Bad",
         "information": "Breaking Bad ist eine US-amerikanische Krimi-Drama-Fernsehserie aus dem Jahr 2008 von Vince Gilligan. Sie zeigt die Wandlung eines an Lungenkrebs erkrankten biederen Chemielehrers zu einem rücksichtslosen Kriminellen.",
         "genre": "Drama",
@@ -211,11 +211,11 @@
             "Betsy Brandt"
         ],
         "rating": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
         "seasons": 5,
         "episodes": 20
     },
-    "entry14":{
+    "entry14": {
         "name": "The Walking Dead",
         "information": "The Walking Dead ist eine US-amerikanische Fernsehserie von Frank Darabont. Die Handlung basiert auf der gleichnamigen Comicserie von Robert Kirkman und Tony Moore. Die Serie startete am 31. Oktober 2010 in den Vereinigten Staaten bei AMC mit einer etwa 67-minütigen Pilotepisode im Rahmen des sogenannten „Fearfest“ des Senders.",
         "genre": "Drama",
@@ -229,11 +229,11 @@
             "Seth Gilliam"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
         "seasons": 10,
         "episodes": 13
     },
-    "entry15":{
+    "entry15": {
         "name": "Black Mirror",
         "information": "Black Mirror ist eine britische Science-Fiction-Serie aus dem Jahr 2011 von Charlie Brooker, die verschiedenartige Auswirkungen der Verwendung von Technik und Medien auf die Gesellschaft thematisiert.",
         "genre": "Drama",
@@ -247,11 +247,11 @@
             "Michaela Coel"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/91LcizItUqL._SY445_.jpg",
         "seasons": 5,
         "episodes": 5
     },
-    "entry16":{
+    "entry16": {
         "name": "Tote Mädchen lügen nicht",
         "information": "Tote Mädchen lügen nicht ist eine US-amerikanische Fernsehserie, die auf dem gleichnamigen Roman von Jay Asher basiert. Die erste Staffel wurde am 31. März 2017 auf Netflix veröffentlicht.",
         "genre": "Drama",
@@ -265,11 +265,11 @@
             "Ross Butler"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
         "seasons": 3,
         "episodes": 13
     },
-    "entry17":{
+    "entry17": {
         "name": "House of Cards",
         "information": "House of Cards ist eine US-amerikanische Fernsehserie, deren Erstausstrahlung 2013 bei dem Video-on-Demand-Anbieter Netflix lief und die vorwiegend den Genres Politthriller und Drama zugeordnet wird. Sie erzählt die Geschichte des durchtriebenen Abgeordneten Francis „Frank“ Underwood, der gemeinsam mit seiner ähnlich machthungrigen Ehefrau ein System von Intrige, Korruption und Mord kreiert, um in höhere politische Ämter aufzusteigen und somit seinen Machteinfluss zu vergrößern.",
         "genre": "Drama",
@@ -283,11 +283,11 @@
             "Sakina Jaffrey"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
         "seasons": 6,
         "episodes": 13
     },
-    "entry18":{
+    "entry18": {
         "name": "Haus des Geldes",
         "information": "Haus des Geldes ist eine spanische Fernsehserie von Álex Pina, die im Stile eines Heist-Movies die Geschichte eines Überfalls mit Geiselnahme auf die spanische Banknotendruckerei (Teil bzw. Staffel 1 und 2) bzw. die spanische Zentralbank (Staffel 3) erzählt. Die spanische Erstausstrahlung der Serie erfolgte ab dem 2. Mai 2017.",
         "genre": "Drama",
@@ -301,11 +301,11 @@
             "Jaime Lorente"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://serienstream.sx/public/img/cover/haus-des-geldes-stream-cover-WcLUNEpGMM4QsyeLhhaUgU9I1Yhq3XIz_220x330.jpg",
         "seasons": 3,
         "episodes": 13
     },
-    "entry19":{
+    "entry19": {
         "name": "Narcos",
         "information": "Narcos ist eine US-amerikanische Kriminal- und Historien-Dramaserie aus dem Jahr 2015. Sie handelt über Drogenkartelle in den 1980er und 1990er Jahren in Kolumbien. Die ersten beiden Staffeln erzählen die Geschichte von Pablo Escobar und dem Medellín-Kartell, die dritte Staffel die des Cali-Kartells. Alternativ ist die Serie auch unter dem Titel Narcos: Colombia bekannt.",
         "genre": "Drama",
@@ -319,11 +319,11 @@
             "Jorge Monterrosa"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png" ,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
         "seasons": 1,
         "episodes": 10
     },
-    "entry20":{
+    "entry20": {
         "name": "Prison Break",
         "information": "Prison Break ist eine US-amerikanische Actionserie von Autor Paul Scheuring, die ab 2005 bis 2009 produziert und 2017 fortgesetzt wurde. Sie besteht zurzeit aus 90 Episoden, welche in fünf Staffeln unterteilt sind. Die Erstausstrahlung fand ab dem 29. August 2005 auf dem US-amerikanischen Fernsehsender Fox statt.",
         "genre": "Action",
@@ -340,5 +340,20 @@
         "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Prison_Break_%28miniseries%29.jpg/220px-Prison_Break_%28miniseries%29.jpg",
         "seasons": 5,
         "episodes": 22
+    },
+    "entry21": {
+        "name": "Eli",
+        "information": "Ein Junge verirrt sich in einem verfluchten Haus, während er gegen eine seltene Krankheit kämpft.",
+        "genre": "Horror",
+        "type": "Movie",
+        "actors": [
+            "Kelly Reilly",
+            "Sadie Sink",
+            "Lili Taylor",
+            "Max Martini",
+            "Charlie Shotwell"
+        ],
+        "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a2/Eli_film_poster.jpeg"
     }
 }
