@@ -14,7 +14,6 @@ class DataHandler {
             if (curName.localeCompare(name) == 0) {
                 //getting information for name
                 const information = data[key].information;
-                console.log(information);
                 return information;
             }
         }
@@ -28,6 +27,7 @@ class DataHandler {
             if (curGenre.localeCompare(genre) == 0) {
                 //getting entry with matching genre
                 const title = new Title_js_1.Title(data[key].name, data[key].information, data[key].image_url);
+                //adding title to list
                 result.push(title);
             }
         }
@@ -42,7 +42,6 @@ class DataHandler {
             if (curName.localeCompare(name) == 0) {
                 //getting information for name
                 const actors = data[key].actors;
-                console.log(actors);
                 return actors;
             }
         }
@@ -55,12 +54,14 @@ class DataHandler {
             //comparing names
             if (curName.localeCompare(name) == 0) {
                 for (var entry in watchlist) {
+                    //checking if title is already in watchlist
                     if (watchlist[entry].name.localeCompare(name) == 0) {
                         return false;
                     }
                     else {
                         watchlist.push(data[key]);
                         var json = JSON.stringify(watchlist) + '\n';
+                        //adding title to watchlist
                         fs.writeFileSync('src/watchlist.json', json);
                         return true;
                     }

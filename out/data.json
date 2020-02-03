@@ -29,7 +29,7 @@
             "Gina Torres"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Suits_season_7_dvd_cover.jpg/220px-Suits_season_7_dvd_cover.jpg",
         "seasons": 9,
         "episodes": 16
     },
@@ -47,7 +47,7 @@
             "Caleb McLaughlin"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/A1on6o1-ziL._SL1500_.jpg",
         "seasons": 3,
         "episodes": 13
     },
@@ -65,7 +65,7 @@
             "Jessica Lange"
         ],
         "rating": 2,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/81ofJXOBCtL._SY445_.jpg",
         "seasons": 3,
         "episodes": 12
     },
@@ -83,7 +83,7 @@
             "Tom Hardy"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/912AErFSBHL._SY445_.jpg"
     },
     "entry6": {
         "name": "Avengers Endgame",
@@ -99,7 +99,7 @@
             "Jeremy Renner"
         ],
         "rating": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
+        "image_url": "https://www.dvd-forum.at/img/uploaded/MV5BMTkxNTQzNTg4Nl5BMl5BanBnXkFtZTgwMzYzNDQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
     },
     "entry7": {
         "name": "The Dark Knight",
@@ -147,7 +147,7 @@
             "Sasha Barrese"
         ],
         "rating": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png"
+        "image_url": "https://live.staticflickr.com/3661/3617427122_48b2b028c1.jpg"
     },
     "entry10": {
         "name": "Deadpool",
@@ -247,7 +247,7 @@
             "Michaela Coel"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/91LcizItUqL._SY445_.jpg",
         "seasons": 5,
         "episodes": 5
     },
@@ -301,7 +301,7 @@
             "Jaime Lorente"
         ],
         "rating": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/220px-Deadpool_%282016_poster%29.png",
+        "image_url": "https://serienstream.sx/public/img/cover/haus-des-geldes-stream-cover-WcLUNEpGMM4QsyeLhhaUgU9I1Yhq3XIz_220x330.jpg",
         "seasons": 3,
         "episodes": 13
     },
@@ -340,5 +340,20 @@
         "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Prison_Break_%28miniseries%29.jpg/220px-Prison_Break_%28miniseries%29.jpg",
         "seasons": 5,
         "episodes": 22
+    },
+    "entry21": {
+        "name": "Eli",
+        "information": "Ein Junge verirrt sich in einem verfluchten Haus, während er gegen eine seltene Krankheit kämpft.",
+        "genre": "Horror",
+        "type": "Movie",
+        "actors": [
+            "Kelly Reilly",
+            "Sadie Sink",
+            "Lili Taylor",
+            "Max Martini",
+            "Charlie Shotwell"
+        ],
+        "rating": 2,
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a2/Eli_film_poster.jpeg"
     }
 }

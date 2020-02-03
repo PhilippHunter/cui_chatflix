@@ -15,7 +15,6 @@ export class DataHandler {
             if (curName.localeCompare(name) == 0) {
                 //getting information for name
                 const information = data[key].information;
-                console.log(information);
                 return information;
             }
         }
@@ -36,6 +35,7 @@ export class DataHandler {
                     data[key].information,
                     data[key].image_url
                 )
+                //adding title to list
                 result.push(title);
             }
         }
@@ -53,14 +53,12 @@ export class DataHandler {
 
                 //getting information for name
                 const actors = data[key].actors;
-                console.log(actors);
                 return actors;
             }
         }
     }
 
     addToWatchlist(name: any) {
-
         //iterating through object
         for (var key in data) {
             //getting value
@@ -69,12 +67,15 @@ export class DataHandler {
             //comparing names
             if (curName.localeCompare(name) == 0) {
                 for (var entry in watchlist) {
+                    //checking if title is already in watchlist
                     if (watchlist[entry].name.localeCompare(name) == 0) {
                         return false
                     }
                     else {
                         watchlist.push(data[key]);
                         var json = JSON.stringify(watchlist) + '\n';
+
+                        //adding title to watchlist
                         fs.writeFileSync('src/watchlist.json', json);
                         return true;
                     }

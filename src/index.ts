@@ -9,12 +9,11 @@ const app = dialogflow({debug: true})
 
 const dataHandler = new DataHandler()
 
+//#region Information Display
 app.intent('InformationIntent', (conv, params) => {
-    console.log(conv.intent);
-    console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
-    //decide between film and series
+    //check if title is available
     if(input !== '') {
         const information = dataHandler.getInformation(input);        
         conv.ask('Hier sind Informationen zu deiner Suche:\n' +information);
@@ -26,11 +25,10 @@ app.intent('InformationIntent', (conv, params) => {
 });
 
 app.intent('SuggestionInformationIntent_2', (conv, params) => {
-    console.log(conv.intent);
-    console.log(params);
+
     const input = params.Serie ? params.Serie : params.Film;
 
-    //decide between film and series
+    //check if title is available
     if(input !== '') {
         const information = dataHandler.getInformation(input);        
         conv.ask('Hier sind Informationen zu deiner Suche:\n' +information);
@@ -41,13 +39,15 @@ app.intent('SuggestionInformationIntent_2', (conv, params) => {
     }
 });
 
+//#endregion
+
+//#region Actor Information Display
 app.intent('ActorInformationSuggestionIntent', (conv, params) => {
-    let resultString:string = '';
-    console.log(conv.intent);
-    console.log(params);  
+    let resultString:string = ''; 
     let parameters = conv.contexts.get('suggestioninformationintent_2-followup').parameters
     const input = parameters.Serie ? parameters.Serie : parameters.Film;
-    console.log(input);
+
+    //check if title is available
     if(input !== ''){
         let actors = dataHandler.getActors(input);
         actors.forEach(s => resultString = resultString + '\n' + s);
@@ -59,12 +59,11 @@ app.intent('ActorInformationSuggestionIntent', (conv, params) => {
 });
 
 app.intent('ActorInformation-FollowupIntent', (conv, params) => {
-    let resultString:string = '';
-    console.log(conv.intent);
-    console.log(params);   
+    let resultString:string = '';  
     let parameters = conv.contexts.get('informationintent-followup').parameters
     const input = parameters.Serie ? parameters.Serie : parameters.Film;
-    console.log(input);
+
+    //check if title is available
     if(input !== ''){
         let actors = dataHandler.getActors(input);
         actors.forEach(s => resultString = resultString + '\n' + s);
@@ -77,13 +76,13 @@ app.intent('ActorInformation-FollowupIntent', (conv, params) => {
 });
 
 app.intent('ActorInformationIntent', (conv, params) => {
-    console.log(conv.intent);
-    console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
     if(input !== '') {
         let actors = dataHandler.getActors(input);
         conv.ask('Es spielen folgende Schauspieler mit:');
+
+        //create list from recieved titles
         let list : List = utils.createList(actors);
         conv.ask(list);
     }
@@ -92,12 +91,17 @@ app.intent('ActorInformationIntent', (conv, params) => {
     }
 });
 
+//#endregion
+
+//#region Genre Filter
 app.intent('GenreIntent', (conv, params) => {
     let genre = params.Genre;
-    console.log(genre);
     let result = dataHandler.getMoviesInGenre(genre);
+
+    //check if genre could be found
     if(result.length !== 0) {
         conv.ask('Hier sind ein paar Vorschläge:')
+
         //create carousel from recieved titles
         let carousel : Carousel = utils.createCarousel(result);
         conv.ask(carousel);
@@ -106,12 +110,16 @@ app.intent('GenreIntent', (conv, params) => {
         conv.ask('Leider habe ich keinen Titel im gewünschten Genre gefunden. Probiere es mit einem anderen.');
     }
 })
+//#endregion
 
+//#region Inspiration
 app.intent('InspirationWatchlistIntent', (conv) => {
     let result = dataHandler.getMoviesInWatchlist();
+
+    //check if watchlist was not empty
     if(result.length != 0) {
-        console.log(result)
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:')
+
         //create carousel from recieved titles
         let carousel : Carousel = utils.createCarousel(result);
         conv.ask(carousel);
@@ -123,9 +131,11 @@ app.intent('InspirationWatchlistIntent', (conv) => {
 
 app.intent('InspirationCurrentlyLikedIntent', (conv) => {
     let result = dataHandler.getMostLikedMovies();
+
+    //check if movies could be found
     if(result.length != 0) {
-        console.log(result)
         conv.ask('Titel mit den besten Bewertungen:')
+
         //create carousel from recieved titles
         let carousel : Carousel = utils.createCarousel(result);
         conv.ask(carousel);
@@ -137,9 +147,11 @@ app.intent('InspirationCurrentlyLikedIntent', (conv) => {
 
 app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
     let result = dataHandler.getMostLikedMovies();
+
+    //check if movies could be found
     if(result.length != 0) {
-        console.log(result)
         conv.ask('Titel mit den besten Bewertungen:')
+
         //create carousel from recieved titles
         let carousel : Carousel = utils.createCarousel(result);
         conv.ask(carousel);
@@ -148,13 +160,15 @@ app.intent('ShowCurrentlyLikedIntent', (conv, params) => {
         conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.')
     }
 })
+//#endregion
 
+//#region Watchlist
 app.intent('AppendWatchlistIntent', (conv, params) => {
-    console.log(conv.intent);
-    console.log(params);
     const input = params.Serie ? params.Serie : params.Film;
 
+    //check if title is available
     if(input !== '') {
+        //check if title is not yet in watchist
         if(dataHandler.addToWatchlist(input)){
             conv.ask('Ich habe '+input+' zu deiner Watchlist hinzugefügt.');
         }
@@ -168,13 +182,12 @@ app.intent('AppendWatchlistIntent', (conv, params) => {
 })
 
 app.intent('ShowWatchlistIntent', (conv, params) => {
-    //CODE DUPLIKAT!
-
-    console.log(params);
     let result = dataHandler.getMoviesInWatchlist();
+
+    //check if watchlist was not empty
     if(result.length != 0) {
-        console.log(result)
         conv.ask('Folgende Titel befinden sich in deiner Watchlist:')
+
         //create carousel from recieved titles
         let carousel : Carousel = utils.createCarousel(result);
         conv.ask(carousel);
@@ -183,11 +196,17 @@ app.intent('ShowWatchlistIntent', (conv, params) => {
         conv.ask('Leider befinden sich momentan keine Titel in deiner Watchlist.')
     }
 })
+//#endregion
 
+//#region Play Title
 app.intent('PlayTrailerIntent', (conv, params) => {
     let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+
+    //check if title is available
     if(title !== '') {
         conv.ask('Hier ist der Trailer zu '+title+':')
+
+        //create Card View
         conv.ask(new BasicCard({
             title: title,
             image: new Image({
@@ -203,8 +222,12 @@ app.intent('PlayTrailerIntent', (conv, params) => {
 
 app.intent('PlayMovieIntent', (conv, params) => {
     let title:string = params.Serie ? params.Serie.toString() : params.Film.toString();
+
+    //check if title is available
     if(title !== '') {
         conv.ask('Okay, ich starte '+title+':')
+
+        //create Card View
         conv.ask(new BasicCard({
             title: title,
             image: new Image({
@@ -219,14 +242,12 @@ app.intent('PlayMovieIntent', (conv, params) => {
 })
 
 app.intent('PlaySeriesIntent', (conv, params) => {
-    console.log(params);
-
     //saving parameters
     let season = params.Season;
     let episode = params.number;
     let title:string = params.Serie.toString();
 
-    //checing if title exists
+    //checking if title exists
     if(title !== '') {
 
         //checking if season and episodes exist -> returns array [true/false, maxSeasonNumber, maxEpisodeNumber]
@@ -257,6 +278,7 @@ app.intent('PlaySeriesIntent', (conv, params) => {
         conv.ask('Leider habe ich den Titel nicht gefunden. Versuche es mit einem anderen.')
     }
 })
+//#endregion
 
 app.fallback((conv) => {
     const intent = conv.intent
